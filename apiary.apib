@@ -1,0 +1,85 @@
+FORMAT: 1A
+HOST: https://polls.apiblueprint.org/
+
+# Test
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Manager Collection [/managers]
+
+### List All Managers [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "Name": "abc",
+                "erp": 12345,
+                "Gender": 'M',
+                "Phone Number": 1234567910,
+                "Age": 20,
+                "Email": "test@123.com",
+                "Taskname": "TEST"
+            }
+        ]
+        
+## New Manager [/managers/add]
+
+### Create a New Manager [POST]
+
++ Request (application/json)
+
+        {
+            "Name": "abc",
+            "erp": 12345,
+            "Gender": 'M',
+            "Phone Number": 1234567910,
+            "Age": 20,
+            "Email": "test@123.com"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "Message": "Manager Created"
+            }
+            
+## Delete Manager [/managers/delete]
+
+### Delete a Manager [POST]
+
++ Request (application/json)
+
+        {
+            "erp": 12345
+        }
+    
++ Response 201 (application/json)
+
+        {
+            "erp": 12345,
+            "Message": "Deleted"
+        }
+        
+## Update Info [/managers/update]
+        
+### Update an Info [POST]
+
++ Request (application/json)
+
+        {  
+            "Phone Number": 9876543210
+        }
+        
++ Response 201 (application/json)
+
+        {
+            "Phone Number": 9876543210,
+            "Message": "Field Updated
+        }
