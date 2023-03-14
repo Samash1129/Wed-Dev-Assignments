@@ -1,9 +1,254 @@
 FORMAT: 1A
 HOST: https://polls.apiblueprint.org/
 
-# Test
+# Muhammad Ali Akbar/Syed Ali Mashoud - Mock APi
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+This is an collection of APIS for a Task Manager System.
+## Users Collection [/Users]
+
+### Delete a User [Del]
++ Request (application/json)
+
+        {
+             "UName":"Ali Akbar",
+             "erp":22950,
+             "Batch":2024,
+             "Program":"CS",
+             "Gender":"Male",
+             "age":21,
+             "email":"ali@gmail.com",
+             "PhoneNo":1234455343
+        }
+        
+      
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /Tasks/
+
+    + Body
+
+            {
+             "UName":"Ali Akbar",
+             "erp":22950,
+             "Batch":2024,
+             "Program":"CS",
+             "Gender":"Male",
+             "age":21,
+             "email":"ali@gmail.com",
+             "PhoneNo":1234455343
+            }
+
+### Edit a User [PATCH]
+
++ Request (application/json)
+
+        {
+             "UName":"Ali Mashoud",
+             "erp":22951,
+             "Batch":2024,
+             "Program":"CS",
+             "Gender":"Male",
+             "age":21,
+             "email":"ali@gmail.com",
+             "PhoneNo":1234455343
+        }
+        
+      
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /Tasks/
+
+    + Body
+
+            {
+             "UName":"Ali Mashoud",
+             "erp":22951,
+             "Batch":2024,
+             "Program":"CS",
+             "Gender":"Male",
+             "age":21,
+             "email":"ali@gmail.com",
+             "PhoneNo":1234455343
+            }
+
+
+
+
+### List All Users [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+             "UName":"Ali Akbar",
+             "erp":22950,
+             "Batch":2024,
+             "Program":"CS",
+             "Gender":"Male",
+             "age":21,
+             "email":"ali@gmail.com",
+             "PhoneNo":1234455343
+            }
+        ]
+
+### Create a New User [POST]
+
+You may create your own question using this action. It takes a JSON
+object containing a question and a collection of answers in the
+form of choices.
+
++ Request (application/json)
+
+        {
+              "UName":"Ali Akbar",
+             "erp":22950,
+             "Batch":2024,
+             "Program":"CS",
+             "Gender":"Male",
+             "age":21,
+             "email":"ali@gmail.com",
+             "PhoneNo":1234455343
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /Tasks/
+
+    + Body
+
+            {
+             "UName":"Ali Akbar",
+             "erp":22950,
+             "Batch":2024,
+             "Program":"CS",
+             "Gender":"Male",
+             "age":21,
+             "email":"ali@gmail.com",
+             "PhoneNo":1234455343
+            }
+            
+        
+
+
+## Tasks Collection [/Tasks]
+
+### Delete a Task [Del]
++ Request (application/json)
+
+        {
+             "TaskName":"Welcome Party",
+                "Assignedto":"Ali",
+                "Description":"Very Important",
+                "Deadline":"25-3-2023",
+                "Department":"CS" 
+        }
+        
+      
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /Tasks/
+
+    + Body
+
+            {
+                 "TaskName":"Welcome Party",
+                "Assignedto":"Ali",
+                "Description":"Very Important",
+                "Deadline":"25-3-2023",
+                "Department":"CS"
+            }
+
+### Edit an Task [PATCH]
+
++ Request (application/json)
+
+        {
+             "TaskName":"Beach Party",
+                "Assignedto":"Hamnah",
+                "Description":"Very Important",
+                "Deadline":"25-3-2023",
+                "Department":"CS" 
+        }
+        
+      
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /Tasks/
+
+    + Body
+
+            {
+                 "TaskName":"Beach Party",
+                "Assignedto":"Hamnah",
+                "Description":"Very Important",
+                "Deadline":"25-3-2023",
+                "Department":"CS"
+            }
+
+
+
+
+### List All Tasks [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "TaskName":"Welcome Party",
+                "Assignedto":"Ali",
+                "Description":"Very Important",
+                "Deadline":"25-3-2023",
+                "Department":"CS"
+            }
+        ]
+
+### Create a New Task [POST]
+
+You may create your own question using this action. It takes a JSON
+object containing a question and a collection of answers in the
+form of choices.
+
++ Request (application/json)
+
+        {
+             "TaskName":"Welcome Party",
+                "Assignedto":"Ali",
+                "Description":"Very Important",
+                "Deadline":"25-3-2023",
+                "Department":"CS" 
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /Tasks/
+
+    + Body
+
+            {
+                 "TaskName":"Welcome Party",
+                "Assignedto":"Ali",
+                "Description":"Very Important",
+                "Deadline":"25-3-2023",
+                "Department":"CS"
+            }
+            
+        
 
 ## Manager Collection [/managers]
 
